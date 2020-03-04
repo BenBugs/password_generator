@@ -1,0 +1,197 @@
+/* Custom style sheet for additional control outside of bootstrap css */
+  
+
+html, body { 
+    height: 100%; 
+    width: 100%;
+    margin: 0;
+    line-height: 1.8; 
+    background-color: #e5e5e5;
+    background-image: url("images/password_randoms.svg"); /* line of code needs adding to main portfolio CSS page */
+    background-size: 600px 600px; /* Need to change size of imahe also */
+}
+
+header { 
+    background-color: #fff;
+}
+
+.logo-row {
+    height: 75px;
+}
+
+.logo {
+    background-color: #ffde03;
+    padding: 18px 0 10px 0;
+}
+
+.header-row {
+    border-bottom: 1px solid #c7c7c7;
+} 
+
+h1 {
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Gloria Hallelujah';
+}
+
+h2 {
+    font-size: 28px;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.9;
+}
+
+h3 {
+    font-size: 25px;
+    color: #000;
+    font-weight: 500;
+    font-family: 'Gloria Hallelujah';
+    padding-top: 18px;
+}
+
+h4 {
+    font-size: 22px;
+    color: #000;
+    font-weight: 500;
+    font-family: 'Gloria Hallelujah';
+    padding-top: 18px;
+}
+
+
+.margin-auto {
+    margin: 0 auto; 
+}
+
+.nav-link {
+    padding: 23px 17px 0 17px;
+}
+
+.grey {
+    border-top: 1px solid #c7c7c7;
+}
+
+.white {
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+}
+
+.padding-left {
+    padding-left: 0;
+}
+
+.padding-right {
+    padding-right: 0;
+}
+
+.profile-thumb {
+    max-width: 250px;
+    height: auto; 
+    float: left;
+}
+
+.portfolio-thumb {
+    width: 100%;
+    height: 250px; 
+    position: relative;
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 70px;
+    background-color: #ffde03;
+    margin-left: 0;
+    position: relative;
+    left: 0px;
+    top: 155px;
+}
+
+
+#first-image {
+    background-image: url("images/word_guess.jpg");
+}
+
+#second-image {
+    background-image: url("images/rpg.jpg");
+}
+
+#third-image {
+    background-image: url("images/trivia.jpg");
+}
+
+#fourth-image {
+    background-image: url("images/widget.jpg");
+}
+
+#fifth-image {
+    background-image: url("images/rps.jpg");
+}
+
+
+
+
+/*  footer  */
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    padding-top: 14px;
+    border-top: 1px solid #c7c7c7;
+    background-color: #fff;
+}
+
+
+  
+/*  media queries  */
+
+@media only screen and (max-width: 575px) {
+    .logo-row {
+        height: 170px;
+    }
+    .nav-link {
+        padding: 23px 12px 0 12px;
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 35px;
+        font-weight: 400;   
+        margin-top: 3px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-top: 3px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    .profile-thumb {
+        max-width: 100%;
+        height: auto; 
+    }
+
+    .devices {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .phone {
+        display: none;
+    }
+}
+
+
