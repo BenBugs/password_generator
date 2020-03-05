@@ -7,8 +7,8 @@ html, body {
     margin: 0;
     line-height: 1.8; 
     background-color: #e5e5e5;
-    background-image: url("images/password_randoms.svg"); /* line of code needs adding to main portfolio CSS page */
-    background-size: 600px 600px; /* Need to change size of imahe also */
+    background-image: url("images/password_randoms.svg"); /* add to main folio site */
+    background-size: 600px 600px;
 }
 
 header { 
