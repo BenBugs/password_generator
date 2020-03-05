@@ -11,6 +11,20 @@ html, body {
     background-size: 600px 600px;
 }
 
+.outputField { 
+    border-color: #cfcfcf;
+    border-width: 1px;
+    min-height: 20px;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+}
+
+.checkboxes {
+    text-align: center;
+}
+
+
 header { 
     background-color: #fff;
 }

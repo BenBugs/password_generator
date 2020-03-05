@@ -14,8 +14,6 @@
 </head>
 
 
-
-
 <body>
 
   <!-- logo and navigation > 768px -->
@@ -79,17 +77,6 @@
     </div>
   </header>
 
-
-
-
-
-
-
-
-
-
-
-
   <!-- main content -->
 
   <!-- page containers-->
@@ -99,6 +86,7 @@
     <div class="container-xl mt-3 mt-sm-5">
 
       <div class="row">
+        
         <!-- wrapper row for generator panel -->
 
         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7 white p-4 mb-5">
@@ -106,7 +94,7 @@
 
           <!-- title row -->
 
-          <div class="row header-row m-3">
+          <div class="row header-row mt-0 mr-3 mb-3 ml-3">
             <div class="col padding-left">
               <h2>Password Generator</h2>
             </div>
@@ -114,22 +102,22 @@
 
           <!-- password output field row -->
 
-          <div class="row m-3">
+          <div class="row mt-4 mr-3 mb-0 ml-3">
             <div class="col p-0">
-              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 mb-3 mt-3">
-                <p class="outputField">MrD3rr1ck-cart3r!£*</p>
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0">
+                <p class="outputField" id="output">MrD3rr1ck-cart3r!£*</p>
               </div>
             </div>
           </div>
 
           <!-- password length row -->
 
-          <div class="row m-3">
-            <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9 p-0 mb-3 mt-3">
-              <p>Password length</p>
+          <div class="row mt-2 mr-3 mb-0 ml-3">
+            <div class="col-7 col-sm-9 col-md-9 col-lg-9 col-xl-9 p-0">
+              <p>Password length <span class="text-info">(max. 128 characters)</span></p>
             </div>
 
-            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 p-0 mb-3 mt-3">
+            <div class="col-5 col-sm-3 col-md-3 col-lg-3 col-xl-3 p-0">
               <div class="form-group">
                 <input type="number" class="form-control" id="numInput" aria-describedby="numInputAccess"
                   placeholder="Type number">
@@ -139,38 +127,56 @@
 
           <!-- upperCase row -->
 
-          <div class="row m-3">
-            <div class="col p-0 mb-3 mt-3">
+          <div class="row mt-2 mr-3 mb-0 ml-3">
+            <div class="col-7 col-sm-9 col-md-9 col-lg-9 col-xl-9 p-0">
               <p>Include uppercase letters</p>
             </div>
+
+            <div class="col-5 col-sm-3 col-md-3 col-lg-3 col-xl-3 p-0 checkboxes">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+
           </div>
+          
 
           <!-- lowerCase row -->
 
-          <div class="row m-3">
-            <div class="col p-0 mb-3 mt-3">
+          <div class="row mt-2 mr-3 mb-0 ml-3">
+            <div class="col p-0">
               <p>Include Lowercase letters</p>
+            </div>
+
+            <div class="col-5 col-sm-3 col-md-3 col-lg-3 col-xl-3 p-0 checkboxes">
+              <input type="checkbox" aria-label="Checkbox for following text input">
             </div>
           </div>
 
           <!-- numbers row -->
 
-          <div class="row m-3">
-            <div class="col p-0 mb-3 mt-3">
+          <div class="row mt-2 mr-3 mb-0 ml-3">
+            <div class="col p-0">
               <p>Include numbers</p>
+            </div>
+
+            <div class="col-5 col-sm-3 col-md-3 col-lg-3 col-xl-3 p-0 checkboxes">
+              <input type="checkbox" aria-label="Checkbox for following text input">
             </div>
           </div>
 
           <!-- symbols row -->
 
-          <div class="row m-3">
-            <div class="col p-0 mb-3 mt-3">
+          <div class="row mt-2 mr-3 mb-0 ml-3">
+            <div class="col p-0">
               <p>Include symbols</p>
+            </div>
+            
+            <div class="col-5 col-sm-3 col-md-3 col-lg-3 col-xl-3 p-0 checkboxes">
+              <input type="checkbox" aria-label="Checkbox for following text input">
             </div>
           </div>
 
-          <div class="row m-3">
-            <div class="col p-0 mb-1 mt-5"><button type="button" class="btn btn-info btn-lg btn-block">Generate
+          <div class="row mt-4 mr-3 mb-3 ml-3">
+            <div class="col p-0"><button type="button" class="btn btn-info btn-lg btn-block">Generate
                 password</button>
             </div>
           </div>
@@ -188,15 +194,15 @@
 
       <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 white p-4 mb-5">
 
-        <div class="row header-row m-3">
+        <div class="row header-row mt-0 mr-3 mb-3 ml-3">
           <div class="col padding-left">
             <h2>Readme</h2>
           </div>
         </div>
 
         <div class="col">
-          <div class="col">
-            <p>some text</p>
+          <div class="col p-0">
+            <p>Descritption of how to use the password generator.</p>
           </div>
         </div>
 
