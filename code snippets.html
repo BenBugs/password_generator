@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+
+
+<body>
+<script>
+
+
+// useful code
+
+var alphabetLower = "abcdefghijklmnopqrstuvwxyz";
+var alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789";
+var specialCharacters" !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+
+function randomNum () {
+  // functions can return anything.
+  return Math.floor(Math.random() * 26);
+}
+
+function alphabetLowerResult() {
+  // strings have methods, like .charAt()
+  return alphabetLower.charAt(randomNum());
+}
+
+// activate function code with ()
+console.log(alphabetLowerResult());
+
+
+// const listItem = famousSayings[2];
+
+// console.log(listItem);
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
