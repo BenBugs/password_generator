@@ -3,8 +3,10 @@
 // the bloc below outputs a single randomLowerCaseLetter
 
 // find page elements
+var newPassword = alphabetLowerResult;
 var output = document.getElementById("output");
 var button = document.getElementById("button");
+var length = document.getElementById("button");
 
 
 // outputs random letter from string
@@ -21,7 +23,7 @@ function alphabetLowerResult() {
 
 // functions
 function setOutput() {
-    output.textContent = alphabetLowerResult(); // This code...
+    output.textContent = newPassword(); // This code...
 }
 
 
