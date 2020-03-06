@@ -6,11 +6,13 @@
 // find page elements
 var outputElement = document.getElementById("output");
 var lengthElement = document.getElementById("length");
-var buttonElement = document.getElementById("button");
-var checkboxLowerElement = document.getElementById("checkboxLower").checked;
+var checkboxLowerElement = document.getElementById("checkboxLower");
 var checkboxUpperElement = document.getElementById("checkboxUpper");
 var checkboxNumberElement = document.getElementById("checkboxNumber");
 var checkboxSymbolElement = document.getElementById("checkboxSymbol");
+var generateElement = document.getElementById("generate");
+
+
 
 
 // strings
@@ -22,13 +24,13 @@ var symbol = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"; // I've cheated and missed \ spac
 
 
 // strings object
-var randomStings = {
+var randomStrings = {
     length: getLength,
     lower: getAlphabetLower,
     upper: getAlphabetUpper,
     number: getNumber,
     symbol: getSymbol,
-}
+};
 
 
 
@@ -38,7 +40,7 @@ function randomNum() {
 }
 
 
-// stores length of desire password
+// stores length of desired password
 function getLength() {
     return fieldValLength;
 }
@@ -63,30 +65,33 @@ function getSymbol() {
 
 
 // listens to page elements and parses their value (didn't know all status/values could be combined in one function!!!)
-buttonElement.addEventListener("click", function () {
+generateElement.addEventListener("click", function () {
     var fieldValLength = parseInt(lengthElement.value); // aghhhh!!! gets element value converts to integer from string
     var checkboxValLower = checkboxLowerElement.checked;
     var checkboxValUpper = checkboxUpperElement.checked;
     var checkboxValnumber = checkboxNumberElement.checked;
     var checkboxValsymbol = checkboxSymbolElement.checked;
-    outputElement.innerText = newPassword(fieldValLength, checkboxValLower, checkboxValUpper, checkboxValnumber, checkboxValsymbol);
+
+    console.log(fieldValLength, checkboxValLower, checkboxValUpper, checkboxValnumber, checkboxValsymbol);
+
 });
 
 
-// outputPassword function
+
+// output password function
 function outputPassword(length, lower, upper, number, symbol) {
+
+    var outputedPassword = ''; // sets empty string to outputedPassword
+
+    const countCheckboxes = lower + upper + number + symbol; // Counts the the checkboxes
+
+    console.log(countCheckboxes);
+
+
+    var checkboxArray = [lower, upper, number, symbol];
+
+    console.log(checkboxArray);
+
 }
-
-// checks if checkboxes are true of false
-
-function checkboxValidate() {
-    if(checkboxLowerElement == "") {
-alert("hell");
-}
-}
-
-
-console.log(checkboxValidate());
-
 
 
