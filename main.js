@@ -59,11 +59,9 @@ function getSymbol() {
 
 
 // listens to page elements and sets their value (didn't know it could be written in one function)
-lengthElement.addEventListener("click", function() {
-    var listensLength = parseInt(lengthElement.value); // aghhhh!!! gets element value
-
-
-    console.log(listensLength);
+buttonElement.addEventListener("click", function() {
+    var length = parseInt(lengthElement.value); // aghhhh!!! gets element value
+    console.log(length);
 });
 
 
