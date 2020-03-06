@@ -7,7 +7,7 @@
 var outputElement = document.getElementById("output");
 var lengthElement = document.getElementById("length");
 var buttonElement = document.getElementById("button");
-var checkboxLowerElement = document.getElementById("checkboxLower");
+var checkboxLowerElement = document.getElementById("checkboxLower").checked;
 var checkboxUpperElement = document.getElementById("checkboxUpper");
 var checkboxNumberElement = document.getElementById("checkboxNumber");
 var checkboxSymbolElement = document.getElementById("checkboxSymbol");
@@ -78,54 +78,15 @@ function outputPassword(length, lower, upper, number, symbol) {
 }
 
 // checks if checkboxes are true of false
-checkboxLowerIsTrue('#checkboxLower').change(function () {
-    if (checkboxLowerIsTrue(this).attr('checked')) {
-        checkboxLowerIsTrue(this).val('TRUE');
-    } else {
-        checkboxLowerIsTrue(this).val('FALSE');
-    }
-});
 
-checkboxUpperIsTrue('#checkboxLower').change(function () {
-    if (checkboxUpperIsTrue(this).attr('checked')) {
-        checkboxUpperIsTrue(this).val('TRUE');
-    } else {
-        checkboxUpperIsTrue(this).val('FALSE');
-    }
-});
-
-checkboxNumberIsTrue('#checkboxLower').change(function () {
-    if (checkboxNumberIsTrue(this).attr('checked')) {
-        checkboxNumberIsTrue(this).val('TRUE');
-    } else {
-        checkboxNumberIsTrue(this).val('FALSE');
-    }
-});
-
-checkboxSymbolIsTrue('#checkboxLower').change(function () {
-    if (checkboxSymbolIsTrue(this).attr('checked')) {
-        checkboxSymbolIsTrue(this).val('TRUE');
-    } else {
-        checkboxSymbolIsTrue(this).val('FALSE');
-    }
-});
-
-
-
-
-
-
-
-
-
-
-/* Test loop
-var myStringArray = ["Hello","World"];
-var arrayLength = myStringArray.length;
-for (var i = 0; i < arrayLength; i++) {
-    console.log(myStringArray[i]);
-    //Do something
+function checkboxValidate() {
+    if(checkboxLowerElement == "") {
+alert("hell");
 }
-*/
+}
+
+
+console.log(checkboxValidate());
+
 
 
