@@ -60,8 +60,12 @@ function getSymbol() {
 
 // listens to page elements and sets their value (didn't know it could be written in one function)
 buttonElement.addEventListener("click", function() {
-    var length = parseInt(lengthElement.value); // aghhhh!!! gets element value
-    console.log(length);
+    var fieldValLength = parseInt(lengthElement.value); // aghhhh!!! gets element value converts to integer from string
+    var checkboxValLower = checkboxLowerElement.checked;
+    var checkboxValUpper = checkboxUpperElement.checked;
+    var checkboxValnumber = checkboxNumberElement.checked;
+    var checkboxValsymbol = checkboxSymbolElement.checked;
+    console.log(fieldValLength, checkboxValLower, checkboxValUpper, checkboxValnumber, checkboxValsymbol);
 });
 
 
