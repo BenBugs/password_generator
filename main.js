@@ -58,12 +58,15 @@ function getSymbol() {
 }
 
 
-
-// sets output to value.newPassword and outputs to page
+// listens to page elements and sets their value (didn't know it could be written in one function)
 lengthElement.addEventListener("click", function() {
-    var length = lengthElement.value; // gets element value
-    console.log(length);
+    var listensLength = parseInt(lengthElement.value); // aghhhh!!! gets element value
+
+
+    console.log(listensLength);
 });
+
+
 
 
 

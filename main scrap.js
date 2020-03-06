@@ -71,7 +71,10 @@ function setOutput() {
 
 
 
-
+var listensLowerCase = checkboxLowerElement;
+var listensUpperCase = checkboxUpperElement; 
+var listensNumber = checkboxNumberElement; 
+var listensSymbol = checkboxSymbolElement;  
 
 
 
