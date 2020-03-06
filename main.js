@@ -72,7 +72,7 @@ generateElement.addEventListener("click", function () {
     var checkboxValnumber = checkboxNumberElement.checked;
     var checkboxValsymbol = checkboxSymbolElement.checked;
 
-    console.log(fieldValLength, checkboxValLower, checkboxValUpper, checkboxValnumber, checkboxValsymbol);
+    //console.log(fieldValLength, checkboxValLower, checkboxValUpper, checkboxValnumber, checkboxValsymbol);
 
 });
 
@@ -81,17 +81,86 @@ generateElement.addEventListener("click", function () {
 // output password function
 function outputPassword(length, lower, upper, number, symbol) {
 
-    var outputedPassword = ''; // sets empty string to outputedPassword
+    var outputedPassword = ''; // outputedPassword string variable
 
-    const countCheckboxes = lower + upper + number + symbol; // Counts the the checkboxes
+        // check if checkboxes have been checked
+        function checkLower() {
+                if (checkboxLowerElement.checked === true){
+                  return true;
+                } else {
+                   return false;
+                }
+              }
 
-    console.log(countCheckboxes);
+              function checkUpper() {
+                if (checkboxUpperElement.checked === true){
+                  return true;
+                } else {
+                   return false;
+                }
+              }
+
+              function checkNumber() {
+                if (checkboxNumberElement.checked === true){
+                  return true;
+                } else {
+                   return false;
+                }
+              }
+
+              function checkSymbol() {
+                if (checkboxSymbolElement.checked === true){
+                  return true;
+                } else {
+                   return false;
+                }
+              }
+
+              console.log(checkLower(), checkUpper(), checkNumber(), checkSymbol());
+
+            }
+
+        // count the number of checkboxes
+
+        var checkArray = [ {checkLower}, {checkUpper}, {CheckNumber}, {CheckSymbol} ].filter 
+        (item => Object.values(item)[0] // filters out unchecked boxes
+
+        // validate whether the checkbox is true or false
+
+        if(checkArray === 0;){
+            return '';
+        }       
+
+        // count checked char types
+
+        for(let i = 0; i < length; i += checkArray) { 
+            checkArray.forEach(type => {
+                var randomName = Object.keys(type)[0]; 
+                outputPassword =+ randomStrings[randomName]();
+            })
+        } 
 
 
-    var checkboxArray = [lower, upper, number, symbol];
 
-    console.log(checkboxArray);
+        // check if none are checked
 
-}
+
+
+        // loop over the checked boxes
+
+        // loop through each array item using forEach. random strings Object.Keys
+
+        // output string using array
+
+        // push result to outputElement
+
+
+
+
+
+
+
+
+
 
 
