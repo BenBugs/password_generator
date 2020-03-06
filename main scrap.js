@@ -6,13 +6,13 @@
 // find page elements
 var newPassword = getAlphabetLower;
 
-var outputElement = document.getElementById("output");
-var lengthElement = document.getElementById("length");
-var buttonElement = document.getElementById("button");
-var checkboxLowerElement = document.getElementById("checkboxLower");
-var checkboxUpperElement = document.getElementById("checkboxUpper");
-var checkboxNumberElement = document.getElementById("checkboxNumber");
-var checkboxSymbolElement = document.getElementById("checkboxSymbol");
+var output = document.getElementById("output");
+var output = document.getElementById("length");
+var button = document.getElementById("button");
+var checkboxLower = document.getElementById("checkboxLower");
+var checkboxUpper = document.getElementById("checkboxUpper");
+var checkboxNumber = document.getElementById("checkboxNumber");
+var checkboxSymbol = document.getElementById("checkboxSymbol");
 
 
 // strings
@@ -60,11 +60,13 @@ function getSymbol() {
 
 
 // sets output to value.newPassword and outputs to page
-lengthElement.addEventListener("click", function() {
-    var length = lengthElement.value; // gets element value
-    console.log(length);
+button.addEventListener("click", function() {
+    setOutput(newPassword);
 });
-
+// collects getAlphabetLower string stored in setOutput click function and sends to newPassword
+function setOutput() {
+    output.textContent = newPassword();
+}
 
 
 
