@@ -1,6 +1,6 @@
 /* Custom style sheet for additional control outside of bootstrap css */
   
-
+/* add to main folio css */
 html, body { 
     height: 100%; 
     width: 100%;
@@ -11,6 +11,7 @@ html, body {
     background-size: 600px 600px;
 }
 
+/* add to main folio css */
 .outputField { 
     border-color: #cfcfcf;
     border-width: 1px;
@@ -20,7 +21,7 @@ html, body {
     padding: 10px 20px 10px 20px;
 }
 
-.checkboxes {
+.checkbox {
     text-align: center;
 }
 
