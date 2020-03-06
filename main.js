@@ -4,6 +4,7 @@
 
 // find page elements
 var newPassword = alphabetLowerResult;
+var numberResult = "";
 var output = document.getElementById("output");
 var button = document.getElementById("button");
 var length = document.getElementById("button");
@@ -15,18 +16,28 @@ function randomNum() {
 }
 
 var alphabetLower = "abcdefghijklmnopqrstuvwxyz";
+var alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789";
 
 function alphabetLowerResult() {
     return alphabetLower.charAt(randomNum());
 }
 
 
-// functions
+// sets output to value of newPassword and outputs
 function setOutput() {
-    output.textContent = newPassword(); // This code...
+    output.textContent = newPassword();
 }
-
 
 button.addEventListener("click", function() {
     setOutput(alphabetLowerResult);
 });
+
+// Test loop
+var myStringArray = ["Hello","World"];
+var arrayLength = myStringArray.length;
+for (var i = 0; i < arrayLength; i++) {
+    console.log(myStringArray[i]);
+    //Do something
+}
+
