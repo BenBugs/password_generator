@@ -10,7 +10,7 @@ The user can select a password up to 128 characters long and chose the mix of ch
 
 ## The password generator
 
-
+![alt text](screen_grab.jpg) 
 
 ## Technologies
 
