@@ -13,6 +13,8 @@ var checkboxSymbolElement = document.getElementById("checkboxSymbol");
 var generateElement = document.getElementById("generate");
 
 
+
+
 // strings
 var alphabetLower = "abcdefghijklmnopqrstuvwxyz";
 var alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -20,9 +22,21 @@ var number = "0123456789";
 var symbol = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"; // I've cheated and missed \ space and " because they break the string - do I need to use unicode refs?
 
 
+
+// strings object
+var randomStrings = {
+    length: getLength,
+    lower: getAlphabetLower,
+    upper: getAlphabetUpper,
+    number: getNumber,
+    symbol: getSymbol,
+};
+
+
+
 // outputs random letter from string
-function randomNum(length) {
-    return Math.floor(Math.random() * length);
+function randomNum() {
+    return Math.floor(Math.random() * 26);
 }
 
 
@@ -34,36 +48,19 @@ function getLength() {
 
 // outputs random letter from string
 function getAlphabetLower() {
-    return alphabetLower.charAt(randomNum(alphabetLower.length));
+    return alphabetLower.charAt(randomNum());
 }
 
 function getAlphabetUpper() {
-    return alphabetUpper.charAt(randomNum(alphabetUpper.length));
+    return alphabetUpper.charAt(randomNum());
 }
 
 function getNumber() {
-    return number.charAt(randomNum(number.length));
+    return number.charAt(randomNum());
 }
 
 function getSymbol() {
-    return symbol.charAt(randomNum(symbol.length));
-}
-
-function getCharacter(includeUpper, includeLower, includeNumber, includeSymbol) {
-    var characters = "";
-
-    // Build characters from options.
-    if (includeUpper) {
-        characters += getAlphabetUpper();
-    }
-    if (includeLower) {
-        characters += getAlphabetLower();
-    }
-    
-    // TODO finish these
-
-    // Pick one random character.
-    return characters.charAt(randomNum(characters.length));
+    return symbol.charAt(randomNum());
 }
 
 
@@ -75,23 +72,70 @@ generateElement.addEventListener("click", function () {
     var checkboxValnumber = checkboxNumberElement.checked;
     var checkboxValsymbol = checkboxSymbolElement.checked;
 
-    console.log(fieldValLength, checkboxValLower, checkboxValUpper, checkboxValnumber, checkboxValsymbol);
-
-    // We build on this value.
-    var password = "";
-
-    var i = 0;
-    while (i < fieldValLength) {
-        // Call our generic random character function with options.
-        password += getCharacter(checkboxValUpper, checkboxValLower, checkboxValnumber, checkboxValsymbol);
-
-        // increment iterator.
-        i++;
-        // i += 1;
-        // i = i + 1;
-    }
-    
-    // Output to the DOM.
-    console.log(password);
-    outputElement.innerText = password;
+    //console.log(fieldValLength, checkboxValLower, checkboxValUpper, checkboxValnumber, checkboxValsymbol);
 });
+
+
+// output password function
+function outputPassword(length, lower, upper, number, symbol) {
+    var outputedPassword = ''; // outputedPassword string variable
+}
+
+    // check if checkboxes have been checked
+    
+    
+    function checkLower() {
+        if (checkboxLowerElement.checked == true) {
+            console.log('true');
+        } else {
+            console.log('false');
+        }
+    }
+
+    function checkUpper() {
+        if (checkboxUpperElement.checked == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkNumber() {
+        if (checkboxNumberElement.checked == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkSymbol() {
+        if (checkboxSymbolElement.checked == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    
+    // write string to take in 'true' arrays
+
+
+    // this checks if there are no arrays
+
+    if (checkArray === 0){
+        return '';
+    }
+
+    // take variable from length field 
+
+    
+
+    // write loop to 
+
+
+
+
+
+
+
+

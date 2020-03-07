@@ -4,15 +4,15 @@
 
 
 // find page elements
-var newPassword = getAlphabetLower;
+var outputElement = document.getElementById("output");
+var lengthElement = document.getElementById("length");
+var checkboxLowerElement = document.getElementById("checkboxLower");
+var checkboxUpperElement = document.getElementById("checkboxUpper");
+var checkboxNumberElement = document.getElementById("checkboxNumber");
+var checkboxSymbolElement = document.getElementById("checkboxSymbol");
+var generateElement = document.getElementById("generate");
 
-var output = document.getElementById("output");
-var output = document.getElementById("length");
-var button = document.getElementById("button");
-var checkboxLower = document.getElementById("checkboxLower");
-var checkboxUpper = document.getElementById("checkboxUpper");
-var checkboxNumber = document.getElementById("checkboxNumber");
-var checkboxSymbol = document.getElementById("checkboxSymbol");
+
 
 
 // strings
@@ -24,12 +24,13 @@ var symbol = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"; // I've cheated and missed \ spac
 
 
 // strings object
-var randomStings = {
-lower: getAlphabetLower,
-upper: getAlphabetUpper,
-number: getNumber,
-symbol: getSymbol,
-}
+var randomStrings = {
+    length: getLength,
+    lower: getAlphabetLower,
+    upper: getAlphabetUpper,
+    number: getNumber,
+    symbol: getSymbol,
+};
 
 
 
@@ -38,6 +39,11 @@ function randomNum() {
     return Math.floor(Math.random() * 26);
 }
 
+
+// stores length of desired password
+function getLength() {
+    return fieldValLength;
+}
 
 
 // outputs random letter from string
@@ -58,37 +64,103 @@ function getSymbol() {
 }
 
 
+// listens to page elements and parses their value (didn't know all status/values could be combined in one function!!!)
+generateElement.addEventListener("click", function () {
+    var fieldValLength = parseInt(lengthElement.value); // aghhhh!!! gets element value converts to integer from string
+    var checkboxValLower = checkboxLowerElement.checked;
+    var checkboxValUpper = checkboxUpperElement.checked;
+    var checkboxValnumber = checkboxNumberElement.checked;
+    var checkboxValsymbol = checkboxSymbolElement.checked;
 
-// sets output to value.newPassword and outputs to page
-button.addEventListener("click", function() {
-    setOutput(newPassword);
+    //console.log(fieldValLength, checkboxValLower, checkboxValUpper, checkboxValnumber, checkboxValsymbol);
+
 });
-// collects getAlphabetLower string stored in setOutput click function and sends to newPassword
-function setOutput() {
-    output.textContent = newPassword();
+
+
+
+// output password function
+function outputPassword(length, lower, upper, number, symbol) {
+
+    var outputedPassword = ''; // outputedPassword string variable
+
+    // check if checkboxes have been checked
+    function checkLower() {
+        if (checkboxLowerElement.checked === true) {
+            return true;
+        } else {
+            return false;
+        }
+        console.log(checkLower);
+    }
+
+    function checkUpper() {
+        if (checkboxUpperElement.checked === true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkNumber() {
+        if (checkboxNumberElement.checked === true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkSymbol() {
+        if (checkboxSymbolElement.checked === true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
-
-
-
-var listensLowerCase = checkboxLowerElement;
-var listensUpperCase = checkboxUpperElement; 
-var listensNumber = checkboxNumberElement; 
-var listensSymbol = checkboxSymbolElement;  
-
-
-
-
-
-
-
-/* Test loop
-var myStringArray = ["Hello","World"];
-var arrayLength = myStringArray.length;
-for (var i = 0; i < arrayLength; i++) {
-    console.log(myStringArray[i]);
-    //Do something
+if (checkArray === 0){
+    return '';
 }
-*/
+
+/*
+        // count the number of checkboxes
+
+        var checkArray = [ {checkLower}, {checkUpper}, {CheckNumber}, {CheckSymbol} ].filter
+        (item => Object.values(item))[0] // filters out unchecked boxes
+
+
+        // check if none are checked
+
+        if (checkArray === 0){
+            return '';
+        }
+
+        // loop through each array item using forEach. random strings Object.Keys
+
+        for(let i = 0; i < length; i += checkArray) {
+            checkArray.forEach(type => {
+                var randomName = Object.keys(type)[0];
+                outputPassword =+ randomStrings[randomName]();
+
+                outputPassword +=randomStrings[checkArray]();
+
+            });
+
+        }
+         /*
+
+        // output string using array
+
+
+        // push result to outputElement
+
+
+
+
+
+
+
+
+
 
 
