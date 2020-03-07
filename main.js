@@ -59,8 +59,13 @@ function getCharacter(includeUpper, includeLower, includeNumber, includeSymbol) 
     if (includeLower) {
         characters += getAlphabetLower();
     }
+    if (includeNumber) {
+        characters += getNumber();
+    }
+    if (includeSymbol) {
+        characters += getSymbol();
+    }
     
-    // TODO finish these
 
     // Pick one random character.
     return characters.charAt(randomNum(characters.length));
