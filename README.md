@@ -8,10 +8,6 @@ This project features a random password generator that allows the use to choose 
 
 The user can select a password up to 128 characters long and chose the mix of character types they wish to include in the new password.
 
-## The password generator
-
-![alt text](screen_grab.jpg) 
-
 ## Technologies
 
 The project has been built using;
@@ -26,4 +22,9 @@ The project has been built using JavaScript primarily. It features Methods like 
 ## Acceptance Criteria
 
 To my knowledge I have met most of the acceptance criteria for the project. I needed a help with the final layers of Javascript as my logic and syntax was breaking in places. I'll continue to rienforce my knowledge as I go through the UofA Bootcamp. 
+
+## The password generator
+
+https://benbugs.github.io/password_generator/
+![Password Generator](screen_grab.jpg) 
 
