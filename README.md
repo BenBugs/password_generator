@@ -26,5 +26,7 @@ To my knowledge I have met most of the acceptance criteria for the project. I ne
 ## The password generator
 
 https://benbugs.github.io/password_generator/
+
+
 ![Password Generator](screen_grab.jpg) 
 
